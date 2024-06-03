@@ -443,7 +443,7 @@ module ChunkyPNG
     # channel.
     #
     # This method will return a full color value, with the R, G, and B value
-    # set to the grayscale teint calcuated from the input color's R, G and B
+    # set to the grayscale teint calculated from the input color's R, G and B
     # values.
     #
     # @param [Integer] color The color to convert.
