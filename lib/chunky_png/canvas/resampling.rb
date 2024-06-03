@@ -12,19 +12,19 @@ module ChunkyPNG
     module Resampling
       # Integer Interpolation between two values
       #
-      # Used for generating indicies for interpolation (eg, nearest
+      # Used for generating indices for interpolation (eg, nearest
       # neighbour).
       #
       # @param [Integer] width The width of the source
       # @param [Integer] new_width The width of the destination
-      # @return [Array<Integer>] An Array of Integer indicies
+      # @return [Array<Integer>] An Array of Integer indices
       def steps(width, new_width)
-        indicies, residues = steps_residues(width, new_width)
+        indices, residues = steps_residues(width, new_width)
 
         for i in 1..new_width
-          indicies[i - 1] = (indicies[i - 1] + (residues[i - 1] + 127) / 255)
+          indices[i - 1] = (indices[i - 1] + (residues[i - 1] + 127) / 255)
         end
-        indicies
+        indices
       end
 
       # Fractional Interpolation between two values
@@ -34,9 +34,9 @@ module ChunkyPNG
       #
       # @param [Integer] width The width of the source
       # @param [Integer] new_width The width of the destination
-      # @return [Array<Integer>, Array<Integer>] Two arrays of indicies and residues
+      # @return [Array<Integer>, Array<Integer>] Two arrays of indices and residues
       def steps_residues(width, new_width)
-        indicies = Array.new(new_width, nil)
+        indices = Array.new(new_width, nil)
         residues = Array.new(new_width, nil)
 
         # This works by accumulating the fractional error and
@@ -53,7 +53,7 @@ module ChunkyPNG
         err = (width - new_width) % denominator
 
         for i in 1..new_width
-          indicies[i - 1] = index
+          indices[i - 1] = index
           residues[i - 1] = (255.0 * err.to_f / denominator.to_f).round
 
           index += base_step
@@ -64,7 +64,7 @@ module ChunkyPNG
           end
         end
 
-        [indicies, residues]
+        [indices, residues]
       end
 
       # Resamples the canvas using nearest neighbor interpolation.
@@ -102,13 +102,13 @@ module ChunkyPNG
         pixels = Array.new(new_width * new_height)
         i = 0
         for y in 1..new_height
-          # Clamp the indicies to the edges of the image
+          # Clamp the indices to the edges of the image
           y1 = [index_y[y - 1], 0].max
           y2 = [index_y[y - 1] + 1, height - 1].min
           y_residue = interp_y[y - 1]
 
           for x in 1..new_width
-            # Clamp the indicies to the edges of the image
+            # Clamp the indices to the edges of the image
             x1 = [index_x[x - 1], 0].max
             x2 = [index_x[x - 1] + 1, width - 1].min
             x_residue = interp_x[x - 1]
