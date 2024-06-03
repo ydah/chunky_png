@@ -6,7 +6,7 @@ describe ChunkyPNG::Vector do
   it { should respond_to(:points) }
 
   describe "#length" do
-    it "shopuld have 3 items" do
+    it "should have 3 items" do
       expect(subject.length).to eql(3)
     end
   end
