@@ -105,7 +105,7 @@ The file documents the changes to this library over the different versions.
 
 === 1.2.7 - 2013-01-07
 
-- Small PNG decoding performnace improvements by using bitwise math.
+- Small PNG decoding performance improvements by using bitwise math.
 
 === 1.2.6 - 2012-08-07
 
