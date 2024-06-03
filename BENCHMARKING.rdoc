@@ -21,7 +21,7 @@ make sure that the chunky_png is installed for all your interpreters.
 
 What is a speed improvement on one interpreter doesn't necessarily mean the
 performance will be better on other interpreters as well. Please make sure to
-benchamrk different RUby interpreters. When it comes to different Ruby
+benchmark different RUby interpreters. When it comes to different Ruby
 interpreters, the priority is the performance on recent MRI versions.
 
 Some very old benchmark result (using <tt>N=50</tt>) on my 2007 iMac can be 
