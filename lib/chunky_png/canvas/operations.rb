@@ -26,7 +26,7 @@ module ChunkyPNG
 
       # Converts the canvas to grayscale, returning a new canvas.
       #
-      # This method will not modify the canvas. To modift the current canvas,
+      # This method will not modify the canvas. To modify the current canvas,
       # use {#grayscale!} instead.
       #
       # @return [ChunkyPNG::Canvas] A copy of the canvas, converted to
