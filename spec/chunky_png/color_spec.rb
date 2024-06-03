@@ -206,7 +206,7 @@ describe ChunkyPNG::Color do
       expect(html_color("Spring green @ 0.0")).to   eql 0x00ff7f00
     end
 
-    it "should raise for an unkown color name" do
+    it "should raise for an unknown color name" do
       expect { html_color(:nonsense) }.to raise_error(ArgumentError)
     end
   end
