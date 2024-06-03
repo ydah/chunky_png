@@ -41,7 +41,7 @@ describe ChunkyPNG::Canvas::Operations do
       expect { subject.crop(10, 5, 4, 8) }.to_not change { subject.pixels }
     end
 
-    it "should raise an exception when the cropped image falls outside the oiginal image" do
+    it "should raise an exception when the cropped image falls outside the original image" do
       expect { subject.crop(16, 16, 2, 2) }.to raise_error(ChunkyPNG::OutOfBounds)
     end
   end
