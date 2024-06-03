@@ -252,7 +252,7 @@ describe ChunkyPNG::Color do
   end
 
   describe "#to_hex" do
-    it "should represent colors correcly using hex notation" do
+    it "should represent colors correctly using hex notation" do
       expect(to_hex(@white)).to eql "#ffffffff"
       expect(to_hex(@black)).to eql "#000000ff"
       expect(to_hex(@opaque)).to eql "#0a6496ff"
@@ -260,7 +260,7 @@ describe ChunkyPNG::Color do
       expect(to_hex(@fully_transparent)).to eql "#0a649600"
     end
 
-    it "should represent colors correcly using hex notation without alpha channel" do
+    it "should represent colors correctly using hex notation without alpha channel" do
       expect(to_hex(@white, false)).to eql "#ffffff"
       expect(to_hex(@black, false)).to eql "#000000"
       expect(to_hex(@opaque, false)).to eql "#0a6496"
