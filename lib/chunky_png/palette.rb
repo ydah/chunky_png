@@ -30,7 +30,7 @@ module ChunkyPNG
     # Builds a palette instance from a PLTE chunk and optionally a tRNS chunk
     # from a PNG datastream.
     #
-    # This method will cerate a palette that is suitable for decoding an image.
+    # This method will create a palette that is suitable for decoding an image.
     #
     # @param palette_chunk [ChunkyPNG::Chunk::Palette] The palette chunk to
     #   load from
