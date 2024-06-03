@@ -82,7 +82,7 @@ The file documents the changes to this library over the different versions.
 - Improve performance of <tt>Palette.from_canvas</tt>.
 - Add <tt>Color.euclidean_distance_rgba</tt> to compare colors.
 - Bugix in <tt>Canvas.from_bgr_stream</tt>.
-- Documentation and code readibility improvements.
+- Documentation and code readability improvements.
 - README updates, include mention of screencast.
 
 === 1.3.0 - 2014-02-10
