@@ -303,11 +303,11 @@ module ChunkyPNG
 
       # Calculates the binomial coefficient for n over k.
       #
-      # @param [Integer] n first parameter in coeffient (the number on top when
+      # @param [Integer] n first parameter in coefficient (the number on top when
       #   looking at the mathematic formula)
-      # @param [Integer] k k-element, second parameter in coeffient (the number
+      # @param [Integer] k k-element, second parameter in coefficient (the number
       #   on the bottom when looking at the mathematic formula)
-      # @return [Integer] The binomial coeffcient of (n,k)
+      # @return [Integer] The binomial coefficient of (n,k)
       def binomial_coefficient(n, k)
         return  1 if n == k || k == 0
         return  n if k == 1
