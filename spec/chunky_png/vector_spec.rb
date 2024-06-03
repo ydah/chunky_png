@@ -52,7 +52,7 @@ describe ChunkyPNG::Vector do
       expect(subject.offset).to be_kind_of(ChunkyPNG::Point)
     end
 
-    it "should use the mininum x and y coordinates as values for the point" do
+    it "should use the minimum x and y coordinates as values for the point" do
       expect(subject.offset.x).to eql subject.min_x
       expect(subject.offset.y).to eql subject.min_y
     end
